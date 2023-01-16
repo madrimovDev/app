@@ -18,8 +18,8 @@ export default defineConfig({
 			'@api': pathResolver('api'),
 			'@store': pathResolver('stroe'),
 			'@hooks': pathResolver('hooks'),
-			'@utils': pathResolver('utils')
+			'@utils': pathResolver('utils'),
+			'@assets': pathResolver('assets')
 		}
 	}
 })
-
