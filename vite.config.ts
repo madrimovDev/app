@@ -9,7 +9,6 @@ export default defineConfig({
 	plugins: [react()],
 	resolve: {
 		alias: {
-			'@': pathResolver(''),
 			'@contexts': pathResolver('contexts'),
 			'@components': pathResolver('components'),
 			'@providers': pathResolver('providers'),
@@ -17,7 +16,7 @@ export default defineConfig({
 			'@routers': pathResolver('routers'),
 			'@pages': pathResolver('pages'),
 			'@api': pathResolver('api'),
-			'@store': pathResolver('stroe'),
+			'@store': pathResolver('store'),
 			'@hooks': pathResolver('hooks'),
 			'@utils': pathResolver('utils'),
 			'@assets': pathResolver('assets')
