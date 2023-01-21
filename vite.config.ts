@@ -14,6 +14,7 @@ export default defineConfig({
 			'@components': pathResolver('components'),
 			'@providers': pathResolver('providers'),
 			'@services': pathResolver('services'),
+			'@routers': pathResolver('routers'),
 			'@pages': pathResolver('pages'),
 			'@api': pathResolver('api'),
 			'@store': pathResolver('stroe'),
