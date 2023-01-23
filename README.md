@@ -1,4 +1,4 @@
-ReactJS + Typescript + ReduxToolkit
+# ReactJS + Typescript + ReduxToolkit
 
 >**`pnpm`** package manager dan foydalaning
 
