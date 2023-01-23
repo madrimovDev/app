@@ -11,6 +11,7 @@ api.interceptors.request.use(
 		config.headers = config.headers ?? {}
 
 		if (token) {
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			//@ts-ignore
 			config.headers.Authorization = token
 		}
@@ -23,4 +24,3 @@ api.interceptors.request.use(
 )
 
 export default api
-

@@ -6,11 +6,10 @@ const rootContainer = document.getElementById('root') as HTMLElement
 
 const root = createRoot(rootContainer)
 
-const app = (
+const app: JSX.Element = (
 	<StrictMode>
 		<RootProvider />
 	</StrictMode>
 )
 
 root.render(app)
-

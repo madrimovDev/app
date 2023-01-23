@@ -3,15 +3,17 @@ import { ActionCreatorsMapObject, AsyncThunk, bindActionCreators } from '@reduxj
 import useAppDispatch from './useAppDispatch'
 
 type BoundActions<Actions extends ActionCreatorsMapObject> = {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	[key in keyof Actions]: Actions[key] extends AsyncThunk<any, any, any> ? BoundAsyncThunk<Actions[key]> : Actions[key]
 }
-type BoundAsyncThunk<Thunk extends AsyncThunk<any, any, any>> = (...args: Parameters<Thunk>) => ReturnType<ReturnType<Thunk>>
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type BoundAsyncThunk<Thunk extends AsyncThunk<any, any, any>> = (
+	...args: Parameters<Thunk>
+) => ReturnType<ReturnType<Thunk>>
 
 const useActionCreator = <Actions extends ActionCreatorsMapObject>(actions: Actions): BoundActions<Actions> => {
 	const dispatch = useAppDispatch()
 	return useMemo(() => bindActionCreators(actions, dispatch), [])
 }
-
 
 export default useActionCreator
